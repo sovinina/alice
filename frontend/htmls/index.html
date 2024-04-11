@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <script src="https://api-maps.yandex.ru/v3/?apikey=bd895961-7548-425f-9dc4-1daa05b362f9&lang=ru_RU" type="text/javascript"></script>
+    <script src="../js/common.js"></script>
+    <style> html, body, #app { width: 100%; height: 100%; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; } .toolbar { position: absolute; z-index: 1000; top: 0; left: 0; display: flex; align-items: center; padding: 16px; } .toolbar a { padding: 16px; }  </style>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Где Алиса???</title>
+</head>
+<body>
+<svg class="where" width="561" height="49" viewBox="0 0 561 49" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M56.2284 20.2031H60.2347V12.1905H68.2095V16.1968H72.2158V40.1968H56.2284V20.2031ZM48.2158 12.1905H52.2221V20.2031H48.2158V40.1968H44.2095V48.2094H52.2221V44.2031H76.2221V48.2094H84.2347V40.1968H80.2284V12.1905H84.2347V8.22204H48.2158V12.1905Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M284.247 12.1905H288.254V40.1968H284.247V44.2031H300.272V40.1968H296.266V36.1905H300.272V32.222H304.279V28.2157H308.247V24.2094H312.254V40.1968H308.247V44.2031H324.272V40.1968H320.266V12.1905H324.272V8.22204H308.247V12.1905H312.254V16.1968H308.247V20.2031H304.279V24.2094H300.272V28.2157H296.266V12.1905H300.272V8.22204H284.247V12.1905Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M200.228 24.2094H204.235V12.1905H208.241V24.2094H212.247V28.2157H200.228V24.2094ZM192.254 4.21574H200.228V16.1968H196.26V24.2094H192.254V32.222H188.247V40.1968H184.241V44.2031H200.228V40.1968H196.26V32.222H216.254V40.1968H212.247V44.2031H228.235V40.1968H224.266V32.222H220.26V24.2094H216.254V16.1968H212.247V8.22204H208.241V0.209442H192.254V4.21574Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M100.222 16.1968H104.228V12.1905H120.254V16.1968H124.222V24.2094H100.222V16.1968ZM100.222 12.1905H96.2158V16.1968H92.2473V36.1905H96.2158V40.1968H100.222V44.2031H124.222V40.1968H132.235V36.1905H120.254V40.1968H104.228V36.1905H100.222V28.2157H132.235V16.1968H128.228V12.1905H124.222V8.22204H100.222V12.1905Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M248.266 12.1905H244.26V20.2031H240.254V40.1968H236.247V36.1905H232.241V44.2031H244.26V40.1968H248.266V20.2031H252.235V12.1905H264.254V40.1968H260.247V44.2031H276.272V40.1968H272.266V8.22204H248.266V12.1905Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.215759 4.21574H4.22206V40.1968H0.215759V44.2031H16.2032V40.1968H12.2347V4.21574H28.2221V12.1905H36.2347V0.209442H0.215759V4.21574Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M360.254 12.1905V8.22204H344.266V12.1905H340.26V16.1968H336.254V36.1905H340.26V40.1968H344.266V44.2031H368.266V40.1968H372.272V32.222H368.266V36.1905H364.26V40.1968H348.272V36.1905H344.266V16.1968H348.272V12.1905H360.254Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M404.285 24.2094V28.2157H408.291V36.1905H404.285V40.1968H408.291V44.2031H420.272V40.1968H416.266V12.1905H412.26V8.22204H388.26V12.1905H404.285V16.1968H408.291V24.2094H404.285Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M432.291 8.22204H440.266V4.21574H452.285V8.22204H456.291V16.1968H448.279V20.2031H440.266V28.2157H448.279V24.2094H452.285V20.2031H460.298V16.1968H464.266V4.21574H460.298V0.209442H432.291V8.22204Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M528.291 8.22204H536.304V4.21574H548.285V8.22204H552.291V16.1968H544.279V20.2031H536.304V28.2157H544.279V24.2094H548.285V20.2031H556.298V16.1968H560.304V4.21574H556.298V0.209442H528.291V8.22204Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M480.291 8.22204H488.304V4.21574H500.285V8.22204H504.291V16.1968H496.279V20.2031H488.304V28.2157H496.279V24.2094H500.285V20.2031H508.298V16.1968H512.304V4.21574H508.298V0.209442H480.291V8.22204Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M404.285 40.1968L392.266 40.1968V36.1905H388.26V28.2157H392.266V24.2094L404.285 24.2094V20.2031H384.254V24.2094H380.285V40.1968H384.254V44.2031H404.285V40.1968Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M536.304 36.1905H532.298V40.1968H536.304V44.2031H544.279V40.1968H548.285V36.1905H544.279V32.222H536.304V36.1905Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M440.266 36.1905H436.298V40.1968H440.266V44.2031H448.279V40.1968H452.285V36.1905H448.279V32.222H440.266V36.1905Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M488.304 36.1905H484.298V40.1968H488.304V44.2031H496.279V40.1968H500.285V36.1905H496.279V32.222H488.304V36.1905Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M360.254 12.1905V16.1968H364.26V20.2031H372.272V8.22204H364.26V12.1905H360.254Z" fill="#FEFEFE"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M388.26 12.1905L384.254 12.1905V16.1968H388.26V12.1905Z" fill="#FEFEFE"/>
+</svg>
+<div class="cell">
+    <div id="app"></div>
+    <form action="http://localhost:5050/api/people/" method="post">
+        <h2>Добавить подозреваемого</h2>
+        <label for="name">Имя подозреваемого:</label>
+        <input type="text" id="name" name="name" placeholder="Введите имя" />
+        <label for="date">Дата последнего входа:</label>
+        <input type="date" id="date" name="date" />
+        <label for="address">Адрес:</label>
+        <input type="text" id="address" name="address" placeholder="Введите адрес" />
+        <label for="latitude">Широта:</label>
+        <input type="text" id="latitude" name="latitude" placeholder="Введите широту" />
+        <label for="longitude">Долгота:</label>
+        <input type="text" id="longitude" name="longitude" placeholder="Введите долготу" />
+        <input type="submit" id="submit"/>
+    </form>
+</div>
+
+<div class="btns">
+    <div class="btn"><a href="suspects.html">Открыть БД Подозреваемые</a></div>
+    <div class="btn"><a href="clues.html">Открыть БД Улики</a></div>
+    <div class="btn"><a href="motives.html">Открыть БД Мотивы</a></div>
+</div>
+</body>
+</html>
